@@ -1,27 +1,20 @@
-int count = 1500;
-PVector[] locs = new PVector[count];
-PVector[] vels = new PVector[count];
-float[] d = new float[count];
-color[] c = new color[count];
+class Raindrop {
+  PVector loc, vel, acc;
+  int d;
 
-void setup() {
-  background(255);
-  colorMode(HSB, 360, 100, 100);
-  size(500, 500);
-  for (int i = 0; i < count; i++) {
-    locs[i] = new PVector(random(width), 0);
-    d[i] = random(5,50);
-    c[i] = color(random(360), 100, 100);
-    vels[i] = new PVector(.02,random(.15,1));
+  Raindrop() {
+    d = 10;
+    loc = new PVector(random(width), -d); 
+    vel = new PVector(0, 1);
+    acc = new PVector(0, .01);
   }
-}
 
-void draw() {
-  for (int i = 0; i < count; i++) {
-    fill(c[i]);
-    strokeWeight(9);
-    ellipse(locs[i].x, locs[i].y, d[i], d[i]);
-    locs[i].add(vels[i]);
+  void display() {
+    ellipse(loc.x, loc.y, d, d);
+  }
+  void drop() {
+    vel.add(acc);
+    loc.add(vel);
   }
 }
 
