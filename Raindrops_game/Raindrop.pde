@@ -9,7 +9,7 @@ class Raindrop {
     loc = new PVector(random(width), d/2); 
     vel = new PVector(0, random(1, 2));
     acc = new PVector(0, .01);
-    img=loadImage ("raindrop.png");
+    img=loadImage ("raindrop.png"); //The picture of the raindrop is loaded here.
   }
 
   void display() {
