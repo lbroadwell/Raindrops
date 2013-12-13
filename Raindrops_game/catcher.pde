@@ -9,7 +9,7 @@ class Catcher {
 
   void display() {
     loc.x=mouseX;
-    ellipse(loc.x, loc.y, d, d);
+    ellipse (loc.x, loc.y, d, d);
   }
 
   void update(Raindrop m) { //sets raindrop back to zero 
