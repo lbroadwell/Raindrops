@@ -55,7 +55,7 @@ void draw() {
   }
 }
 if (lives <= 0) { 
-    stop = true;
+    end = true;
 }
 c.display(); //makes the catcher appear
 currentTime = millis();
@@ -73,5 +73,6 @@ if (start==true) {
     r[i].drop();
     c.update(r[i]);
   }
+}
 }
 
