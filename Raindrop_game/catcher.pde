@@ -10,7 +10,7 @@ class Catcher {
   }
 
   void display() {
-    loc.x=mouseX;
+    loc.x=mouseX; //the PVector is followed by the mouse
     image(image, loc.x, loc.y, d, d);
   }
 
@@ -18,7 +18,7 @@ class Catcher {
     if (loc.dist(m.loc) < d/2 + m.d/2) {
       m.loc.set(width*10, -height);
       m.vel.set(0, 0);
-      score++; //increases score 
+      score++; //increases score
     }
   }
 }

@@ -1,4 +1,3 @@
-
 int scoreSize = 20;
 int oldTime =0;
 int currentTime = 0;
@@ -49,7 +48,7 @@ void draw() {
       r[i].drop();
       c.update(r[i]);
       if (r[i].loc.y >= height) {
-        lives-=1;
+        lives-=1; //states that if the raindrop is below the catcher that you lose one life
         r[i].loc.set(width*10, -height);
         r[i].vel.set(0, 0);
       }
@@ -62,16 +61,16 @@ void draw() {
   c.display(); //makes the catcher appear
   currentTime = millis();
   TimeChange = currentTime - oldTime;
-  if (TimeChange >= 2000) { //2000 milliseconds = 2 seconds. The differences between the current time and the old time is the time change. This means a new drop will fall every two seconds.
+  if (TimeChange >= 2000) { 
     if (index < r.length) {
       index++;
       oldTime = currentTime;
     }
   }
-  if (lives <= 0) { 
+  if (lives <= 0) { //states that if your lives reach zero, that you will be directed to the end screen
     end = true;
   }
-  if (start == true && end == true && win == false) {
+  if (start == true && end == true && win == false) {//this initializes the end screen 
     background(0);
     fill(255, 0, 0);
     textAlign(CENTER);
@@ -79,14 +78,14 @@ void draw() {
     text("GAME OVER", width/2, height/2);
     rectMode(CENTER);
     rect(rx, ry, rw, rh);
-    fill(0);
-    textSize(40);
-    text("TRY AGAIN", width/2, height/2+50);
+    textSize(20);
+    text("try again?", 80, 25);
+    textSize(50);
   }
-  if (score >= 10) { 
+  if (score >= 10) { //states that if your score reaches ten, then you go to the win screen
     win = true;
   }
-  if (start == true && end == false && win == true) {
+  if (start == true && end == false && win == true) { //initializes the win screen
     background(0);
     fill(0, 255, 0);
     textAlign(CENTER);
@@ -97,9 +96,12 @@ void draw() {
     text("Please appreciate it...", width/2 + 20, height/2 + 20);
     rectMode(CENTER);
     rect(rx, ry, rw+10, rh); 
+    textSize(20);
+    text("play again?", 80, 25);
+    textSize(50);
   }
 }
-void mousePressed() {
+void mousePressed() { //these initialize the start and restart buttons when you click the button with your mouse
   if (start == true && end == true && win == false && mouseX>rx-rw/2 && mouseX<rx+rw/2 && mouseY>ry-rh/2 && mouseY<ry+rh/2) {
     lives = 3; 
     score = 0;
