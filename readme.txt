@@ -1,4 +1,6 @@
+Summary:
 This game will have an object, known as the catcher, recognize the raindrop that falls from the top of the screen. Once it recognizes the raindrop, the raindrop will disappear and the score will increase by one. If you miss a raindrop, you will lose a life. You have 3 lives until your game is over. Once you catch 10 raindrops, you win and you can restart the game with the button in the upper left hand corner. 
 
 Glitches:
-The umbrella, or catcher, appears on the start screen. I believe its only supposed to appear after you hit the start button. 
+The umbrella, or catcher, appears on the start screen. I believe its only supposed to appear after you hit the start button, but I was having trouble doing that without messing up my entire code. 
+Other than that there are no glitches that i know of. I did have trouble with the lives. For some reason, they kept decreasing no matter if i caught them or not. I changed the acceleration to (0,0) in the catcher class and it fixed the problem. The lives were my main problem. I had difficulty with them. Other than that, I think my code is very simple, but it works. I couldn't figure out how to make it more complicated without messing up what I already had that was working, so I just left it alone. 
