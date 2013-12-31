@@ -1,1 +1,4 @@
 This game will have an object, known as the catcher, recognize the raindrop that falls from the top of the screen. Once it recognizes the raindrop, the raindrop will disappear and the score will increase by one. If you miss a raindrop, you will lose a life. You have 3 lives until your game is over. Once you catch 10 raindrops, you win and you can restart the game with the button in the upper left hand corner. 
+
+Glitches:
+Once you have completed a round, no matter if you win or lose, the text size of the size and score decreases. After that second round, they are put back to the normal size from the beginning. 
