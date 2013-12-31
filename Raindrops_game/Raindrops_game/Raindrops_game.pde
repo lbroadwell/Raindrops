@@ -92,11 +92,11 @@ void draw() {
     textAlign(CENTER);
     textSize(50);
     text("YOU WIN", width/2, height/2);
+    textSize(10);
+    text("Congratulations! You have completed the game that has taken me weeks to complete!", width/2 + 10, height/2 +10);
+    text("Please appreciate it...", width/2 + 20, height/2 + 20);
     rectMode(CENTER);
     rect(rx, ry, rw+10, rh); 
-    fill(0);
-    textSize(30);
-    text("PLAY AGAIN", width/2, height/2+50);
   }
 }
 void mousePressed() {
