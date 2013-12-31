@@ -78,7 +78,7 @@ void draw() {
     text("GAME OVER", width/2, height/2);
     rectMode(CENTER);
     rect(rx, ry, rw, rh);
-    textSize(20);
+    textSize(10);
     text("try again?", 80, 25);
     textSize(50);
   }
@@ -96,7 +96,7 @@ void draw() {
     text("Please appreciate it...", width/2 + 20, height/2 + 20);
     rectMode(CENTER);
     rect(rx, ry, rw+10, rh); 
-    textSize(20);
+    textSize(10);
     text("play again?", 80, 25);
     textSize(50);
   }
